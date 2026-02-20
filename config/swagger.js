@@ -19,7 +19,7 @@ const options = {
         info: {
             title: 'CC22 Midterm Practical Examination APIs Doc',
             // version: '1.0.0',
-            description: `BASE URL : ${process.env.BASE_URL || "http://localhost:3000"}`,
+            description: `BASE URL : https://mt-todolist-backend.onrender.com`,
         },
         components: {
             securitySchemes: {
