@@ -26,6 +26,7 @@ export const createTodov2 = async (req, res, next) => {
 }
 export const updateTodov2 = async (req, res, next) => {
     try {
+
         const userId = req.user.userId
         const todoId = +req.params.todoId
         if (!todoId) throw createError(400, "todoId param is required")

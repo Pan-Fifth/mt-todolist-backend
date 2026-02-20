@@ -59,3 +59,4 @@ export const deleteTodoService = async (userId, todoId) => {
     const result = await prisma.todo.delete({ where: { id: todoId } })
     return result
 }
+
