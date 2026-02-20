@@ -33,7 +33,7 @@ const options = {
         },
         servers: [
             {
-                url: process.env.BASE_URL || "http://localhost:3000",
+                url: "https://mt-todolist-backend.onrender.com/",
                 description: 'CC22 SERVER',
             },]
     },
