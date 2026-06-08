@@ -17,7 +17,7 @@ const options = {
     definition: {
         openapi: '3.0.0',
         info: {
-            title: 'CC22 Midterm Practical Examination APIs Doc',
+            title: 'CC23 Midterm Practical Examination APIs Doc',
             // version: '1.0.0',
             description: `BASE URL : https://mt-todolist-backend.onrender.com`,
         },
@@ -34,7 +34,7 @@ const options = {
         servers: [
             {
                 url: "https://mt-todolist-backend.onrender.com/",
-                description: 'CC22 SERVER',
+                description: 'CC23 SERVER',
             },]
     },
 

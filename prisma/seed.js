@@ -4,12 +4,10 @@ import { prisma } from '../config/prismaClient.js'
 async function main() {
     await prisma.todo.deleteMany()
     await prisma.user.deleteMany()
+    await prisma.$executeRawUnsafe(`TRUNCATE TABLE "Todo", "User" RESTART IDENTITY CASCADE `)
+
     const studentNames = [
-        "Best", "Aut", "Aon", "Benjy", "Ben",
-        "Pim", "Jammy", "Ben", "Dive", "Got",
-        "Boat", "Bam", "Art", "Gon", "Art",
-        "Peach", "Ohm", "Zil", "Kwan", "Kathi",
-        "Night", "Prame", "Poom", "Ting", "Hera",
+        "Pop", "Fame", "Kanaan", "Sun", "Fiat", "Mac", "Prem", "Name", "Jenny", "Copter", "Best", "Ro", "Boss", "Nok", "Dech", "Noom", "Pu", "Got", "Fah",
         "Allie", "Pan", "Nape"
     ];
 
@@ -25,7 +23,7 @@ async function main() {
         select: { id: true },
     })
 
-    const todosTitle = ["Learn HTML", "Learn CSS", "Learn JavaScript", "Learn React", "Watch cartoon for rest"]
+    const todosTitle = ["Prepare stuffs for weekend hangout", "Refactor Midterm Project", "Learn JavaScript", "Learn React", "Watch cartoon for rest", ""]
 
     for (const user of users) {
         await prisma.todo.createMany({
