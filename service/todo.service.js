@@ -31,11 +31,11 @@ export const updateTodoService = async (userId, todoId, content, isdone) => {
     if (todo.userId != user.id) throw createError(401, "userId not match")
     if (isdone && typeof isdone == "string") {
         if (isdone.toLocaleLowerCase() == "false") {
-            dataIsdone = Boolean(false)
+            isdone = Boolean(false)
         } else if (isdone.toLocaleLowerCase() == "true") {
-            dataIsdone = Boolean(true)
+            isdone = Boolean(true)
         } else {
-            dataIsdone = undefined
+            isdone = undefined
         }
     }
 
