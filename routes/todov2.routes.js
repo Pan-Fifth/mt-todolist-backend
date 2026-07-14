@@ -133,7 +133,7 @@ todov2Router.delete("/delete/:todoId", verifyToken, deleteTodov2)
  *               content:
  *                 type: string
  *                 example: "Read cartoon book"
- *               isDone:
+ *               isdone:
  *                 type: boolean
  *                 example: false
  *     responses:
