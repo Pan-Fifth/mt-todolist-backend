@@ -7,10 +7,10 @@ async function main() {
     await prisma.$executeRawUnsafe(`TRUNCATE TABLE "Todo", "User" RESTART IDENTITY CASCADE `)
 
     const studentNames = [
-        "Pop", "Fame", "Kanaan", "Sun", "Fiat", "Mac", "Prem", "Name", "Jenny", "Copter", "Best", "Ro", "Boss", "Nok", "Dech", "Noom", "Pu", "Got", "Fah",
+        "Pop", "Fame", "Kanan", "Sun", "Fiat", "Mac", "Prem", "Name", "Jenny", "Copter", "Best", "Ro", "Boss", "Nok", "Dech", "Noom", "Pu", "Got", "Fah", "Zeepher",
         "Allie", "Pan", "Nape"
     ];
-
+    
     await prisma.user.createMany({
         data: studentNames.map((a, i) => ({
             username: `${a}${i + 1}`,
