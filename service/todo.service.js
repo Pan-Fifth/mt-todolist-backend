@@ -45,7 +45,7 @@ export const updateTodoService = async (userId, todoId, content, isdone) => {
         },
         data: {
             content,
-            isdone: Boolean(dataIsdone)
+            isdone
         }
     })
     return result
